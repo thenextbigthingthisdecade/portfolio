@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border focus:outline-none;
+  }
+
+  html,
+  body {
+    @apply h-full w-full m-0 p-0 antialiased;
+  }
+
+  body > #__next {
+    @apply h-full w-full;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer utilities {
+  .font-serif-variation {
+    font-variation-settings: "opsz" 72, "SOFT" 50;
+    @apply -tracking-[0.03em];
+  }
+}
