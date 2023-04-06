@@ -9,6 +9,7 @@ module.exports = {
         sans: ["var(--font-inter)", ...fontFamily.sans],
         serif: ["var(--font-fraunces)", ...fontFamily.serif],
         mono: ["Jetbrains Mono", ...fontFamily.mono],
+        heading: ["Musetta", ...fontFamily.serif],
       },
     },
   },

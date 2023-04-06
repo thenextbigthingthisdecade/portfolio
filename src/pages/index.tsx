@@ -1,3 +1,5 @@
+import IntroCard from "@/components/cards/IntroCard";
+import CardGridLayout from "@/components/layouts/CardGridLayout";
 import Head from "next/head";
 
 export default function Home() {
@@ -9,9 +11,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
-      <main className="font-serif font-serif-variation text-2xl md:text-3xl lg:text-4xl font-light text-neutral-400">
-        Hey there, I&apos;m <span className="text-neutral-900">Prakhar</span>.
-      </main>
+      <CardGridLayout>
+        <IntroCard />
+      </CardGridLayout>
     </>
   );
 }

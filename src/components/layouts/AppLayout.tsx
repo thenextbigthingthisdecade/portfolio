@@ -18,7 +18,7 @@ const fraunces = Fraunces({
 export default function AppLayout({ children }: PropsWithChildren) {
   return (
     <main
-      className={`${fraunces.variable} ${inter.variable} max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-2xl mx-auto w-full`}
+      className={`${fraunces.variable} ${inter.variable} max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-2xl mx-auto w-full px-8 font-sans`}
     >
       <NavBar />
       {children}

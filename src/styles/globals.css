@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Musetta";
+  src: url("/fonts/musetta-regular-webfont.woff2") format("woff2");
+}
+
 @layer base {
   * {
     @apply box-border focus:outline-none;
