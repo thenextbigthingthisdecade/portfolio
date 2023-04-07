@@ -11,6 +11,9 @@ module.exports = {
         mono: ["Jetbrains Mono", ...fontFamily.mono],
         heading: ["Musetta", ...fontFamily.serif],
       },
+      textUnderlineOffset: {
+        6: "6px",
+      },
     },
   },
   plugins: [],
