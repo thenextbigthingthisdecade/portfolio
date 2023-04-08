@@ -28,7 +28,7 @@ export default function IntroCard() {
                 // State: focus
                 "focus-visible:ring-4 focus-visible:ring-blue-200",
                 // State: hover
-                "hover:text-neutral-500 underline underline-offset-2 decoration-neutral-200 hover:underline-offset-6 hover:decoration-neutral-600"
+                "hover:text-neutral-900 underline underline-offset-2 decoration-neutral-200 hover:underline-offset-6 hover:decoration-neutral-700"
               )}
             >
               digital garden
@@ -47,7 +47,7 @@ export default function IntroCard() {
                 // State: focus
                 "focus-visible:ring-4 focus-visible:ring-blue-200",
                 // State: hover
-                "hover:text-neutral-500 underline underline-offset-2 decoration-neutral-200 hover:underline-offset-6 hover:decoration-neutral-600"
+                "hover:text-neutral-900 underline underline-offset-2 decoration-neutral-200 hover:underline-offset-6 hover:decoration-neutral-700"
               )}
             >
               learning anything

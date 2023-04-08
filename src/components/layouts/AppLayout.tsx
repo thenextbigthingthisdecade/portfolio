@@ -1,4 +1,4 @@
-import { NavBar } from "@/components/NavBar";
+import { Navbar } from "@/components/NavBar";
 import { Fraunces, Inter } from "next/font/google";
 import { PropsWithChildren } from "react";
 
@@ -20,7 +20,7 @@ export default function AppLayout({ children }: PropsWithChildren) {
     <main
       className={`${fraunces.variable} ${inter.variable} max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-2xl mx-auto w-full px-8 font-sans`}
     >
-      <NavBar />
+      <Navbar />
       {children}
     </main>
   );
