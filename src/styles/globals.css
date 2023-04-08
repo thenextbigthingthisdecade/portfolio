@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Musetta";
-  src: url("/fonts/musetta-regular-webfont.woff2") format("woff2");
+  font-family: "Oritica";
+  src: url("/fonts/oritica-light.woff2") format("woff2");
 }
 
 @layer base {
