@@ -17,7 +17,6 @@ export default function Home(
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <CardGridLayout>
-        {<>{console.log(props)}</>}
         <IntroCard />
         {props.featured?.map(({ card }) =>
           card && !Array.isArray(card) ? <Card key={card.id} {...card} /> : null

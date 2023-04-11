@@ -4,14 +4,18 @@ import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/motionVariants";
 import { Database } from "@/lib/supabase/database.types";
 import { ProjectCard } from "./cards/ProjectCard";
+import { WritingCard } from "./cards/WritingCard";
 
 type CardProps = Database["public"]["Tables"]["cards"]["Row"];
 
 export function Card(props: CardProps) {
   function renderSpecificCard() {
-      if (props.type == "projects") {
-        // @ts-ignore
+    if (props.type == "projects") {
+      // @ts-ignore
       return <ProjectCard large={props.large} {...props.properties} />;
+    } else if (props.type == "writing") {
+      // @ts-ignore
+      return <WritingCard large={props.large} {...props.properties} />;
     }
   }
 
