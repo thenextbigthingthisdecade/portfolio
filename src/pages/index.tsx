@@ -1,10 +1,13 @@
 import { Card } from "@/components/Card";
 import IntroCard from "@/components/cards/IntroCard";
 import CardGridLayout from "@/components/layouts/CardGridLayout";
-import { featuredCards } from "@/lib/data/cards";
+import { supabase } from "@/lib/supabase/supabaseClient";
+import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home(
+  props: InferGetStaticPropsType<typeof getStaticProps>
+) {
   return (
     <>
       <Head>
@@ -14,12 +17,27 @@ export default function Home() {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <CardGridLayout>
+        {<>{console.log(props)}</>}
         <IntroCard />
-
-        {featuredCards.map((card) =>
-          card ? <Card key={card.id} {...card} /> : null
+        {props.featured?.map(({ card }) =>
+          card && !Array.isArray(card) ? <Card key={card.id} {...card} /> : null
         )}
       </CardGridLayout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const { data: featured, error } = await supabase
+    .from("featured")
+    .select("ordering, card:cards(*)")
+    .order("ordering");
+
+  console.log(error);
+
+  return {
+    props: {
+      featured,
+    },
+  };
 }

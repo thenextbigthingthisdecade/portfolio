@@ -2,13 +2,15 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/motionVariants";
-import { CardProps } from "@/lib/types/cardTypes";
+import { Database } from "@/lib/supabase/database.types";
 import { ProjectCard } from "./cards/ProjectCard";
+
+type CardProps = Database["public"]["Tables"]["cards"]["Row"];
 
 export function Card(props: CardProps) {
   function renderSpecificCard() {
-    if (props.type == "projects") {
-      // @ts-ignore
+      if (props.type == "projects") {
+        // @ts-ignore
       return <ProjectCard large={props.large} {...props.properties} />;
     }
   }
