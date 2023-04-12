@@ -57,5 +57,5 @@ export default function SoundController() {
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, [playing, track, howl, volume, mute]);
-  return <Play howl={howl} pause={!playing} volume={volume} />;
+  return <Play howl={howl} pause={!playing} volume={volume} loop={true} />;
 }
