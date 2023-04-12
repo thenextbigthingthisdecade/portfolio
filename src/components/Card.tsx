@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/motionVariants";
 import { Database } from "@/lib/supabase/database.types";
+import { HobbyCard } from "./cards/HobbyCard";
 import { ProjectCard } from "./cards/ProjectCard";
+import { ReadingCard } from "./cards/ReadingCard";
 import { WritingCard } from "./cards/WritingCard";
 
 type CardProps = Database["public"]["Tables"]["cards"]["Row"];
@@ -16,6 +18,14 @@ export function Card(props: CardProps) {
     } else if (props.type == "writing") {
       // @ts-ignore
       return <WritingCard large={props.large} {...props.properties} />;
+    } else if (props.type === "reading") {
+      // @ts-ignore
+      return <ReadingCard large={props.large} {...props.properties} />;
+    } else if (props.type === "hobbies") {
+      // @ts-ignore
+      return <HobbyCard large={props.large} {...props.properties} />;
+    } else {
+      return null;
     }
   }
 

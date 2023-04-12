@@ -26,3 +26,12 @@ export type ReadingProperties = {
   imageUrl: string;
   link: Link;
 };
+
+const cardStyles = ["image", "text", "image_and_text"] as const;
+type CardStyle = typeof cardStyles[number];
+
+export type HobbyProperties = {
+  label: string;
+  cardStyle: CardStyle;
+  properties: Record<string, any>;
+};

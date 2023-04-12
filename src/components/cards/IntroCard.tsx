@@ -12,7 +12,7 @@ export default function IntroCard() {
       variants={FADE_DOWN_ANIMATION_VARIANTS}
     >
       <div className="h-full w-full p-4 sm:p-8">
-        <h1 className="font-serif font-serif-variation text-2xl md:text-3xl lg:text-3xl !tracking-tight font-light text-neutral-400">
+        <h1 className="font-serif font-serif-variation text-2xl md:text-3xl lg:text-4xl !tracking-tight font-light text-neutral-400">
           Heya, I&apos;m{" "}
           <span className="text-neutral-900">Prakhar Nagpal </span>
           👋🏻 Welcome to my{" "}
