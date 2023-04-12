@@ -21,9 +21,6 @@ export function HobbyCard(props: HobbyCardProps) {
       <TextCard label={props.label} large={props.large} {...props.properties} />
     );
   } else if (props.cardStyle === "image_and_text") {
-    {
-      console.log("image_and_text card props:" + props);
-    }
     return (
       // @ts-ignore
       <ImageAndTextCard

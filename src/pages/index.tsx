@@ -32,7 +32,9 @@ export async function getStaticProps() {
     .select("ordering, card:cards(*)")
     .order("ordering");
 
-  console.log(error);
+  if (error) {
+    console.log(error);
+  }
 
   return {
     props: {

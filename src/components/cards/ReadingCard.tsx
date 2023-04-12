@@ -28,9 +28,11 @@ export function ReadingCard(props: ReadingCardProps) {
         />
 
         <div className="-tracking-[0.03em]">
-          {props.tags.map((tag, index) => (
-            <StatusTag key={index} status={tag.label} color={tag.color} />
-          ))}
+          <div className="flex gap-1">
+            {props.tags.map((tag, index) => (
+              <StatusTag key={index} status={tag.label} color={tag.color} />
+            ))}
+          </div>
           <h3 className="mt-3 line-clamp-3">{props.title}</h3>
           <span className="text-neutral-400">{props.author}</span>
         </div>
