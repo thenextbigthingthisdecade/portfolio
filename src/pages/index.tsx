@@ -11,7 +11,7 @@ export default function Home(
   return (
     <>
       <Head>
-        <title>Prakhar&apos;s Forest</title>
+        <title>Prakhar&apos;s Garden</title>
         <meta name="description" content="My digital forest" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />

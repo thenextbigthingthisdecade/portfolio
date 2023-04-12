@@ -1,14 +1,28 @@
-// eslint-disable-next-line @next/next/no-document-import-in-page
+import {
+  GetStaticPathsResult,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+} from "next";
 
-export function capitalize(value: string) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
+import { Card } from "@/components/Card";
+import CardGridLayout from "@/components/layouts/CardGridLayout";
+import { supabase } from "@/lib/supabase/supabaseClient";
+import Head from "next/head";
+
+function capitalize(input: string) {
+  return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
-export default function TypePage() {
+export default function TypePage(
+  props: InferGetStaticPropsType<typeof getStaticProps>
+) {
   return (
     <>
-      {/* <Head title={capitalize(props.cardType?.type ?? "")} />
-
+      <Head>
+        <title>
+          Prakhar&apos;s garden | {capitalize(props.cardType?.type!)}
+        </title>
+      </Head>
       <div className="flex flex-col gap-4 px-2 pt-4 pb-8 md:gap-8">
         <h1 className="font-serif-variation font-serif text-6xl font-extralight text-neutral-900 md:text-8xl">
           {props.cardType?.type}.
@@ -19,10 +33,47 @@ export default function TypePage() {
       </div>
 
       <CardGridLayout>
-        {props.cards.map((card) => (
+        {props.cards?.map((card) => (
           <Card key={card.id} {...card} />
         ))}
-      </CardGridLayout> */}
+      </CardGridLayout>
     </>
   );
+}
+
+export function getStaticPaths(): GetStaticPathsResult {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+}
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const type = context.params?.type;
+
+  // Guard: type is undefined.
+  if (type === undefined) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const { data: cards, error: error_data } = await supabase
+    .from("cards")
+    .select("*")
+    .ilike("type", `%${type}%`)
+    .order("published_at", { ascending: false });
+
+  const { data: cardType, error: error_type } = await supabase
+    .from("card_types")
+    .select("*")
+    .ilike("type", `%${type}%`)
+    .single();
+
+  return {
+    props: {
+      cards,
+      cardType,
+    },
+  };
 }
