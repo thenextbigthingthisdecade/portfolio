@@ -113,7 +113,7 @@ export default function IntroCard() {
               <Kbd key={index}>{elem}</Kbd>
             ))}
           </span>{" "}
-          to change tracks. Press{" "}
+          to change tracks,{" "}
           <span className="inline-flex gap-1 items-center justify-center">
             {["option+up", "option+down"].map((elem, index) => (
               <Kbd key={index}>{elem}</Kbd>
