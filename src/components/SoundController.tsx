@@ -16,7 +16,6 @@ export default function SoundController() {
   const [mute, setMute] = useState<boolean>(false);
   const { howl, state, error } = useHowl({
     src: sources[track],
-    defaultVolume: 1,
   });
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -58,5 +57,5 @@ export default function SoundController() {
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, [playing, track, howl, volume, mute]);
-  return <Play howl={howl} pause={!playing} volume={volume} loop={true} />;
+  return <Play howl={howl} pause={!playing} volume={volume} loop={true} defaultVolume={1.0} />;
 }

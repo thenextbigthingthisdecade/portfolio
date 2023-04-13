@@ -101,7 +101,7 @@ export default function IntroCard() {
           <br />
           <br />
           Music is a pretty big part of my life, so I made sure to add some of
-          my favorite tracks here! Press{" "}
+          my favorite tracks here! Press any{" "} <Kbd>key</Kbd> to start the music, {" "}
           <span className="inline-flex gap-1 items-center justify-center">
             {["ctrl+P"].map((elem, index) => (
               <Kbd key={index}>{elem}</Kbd>
