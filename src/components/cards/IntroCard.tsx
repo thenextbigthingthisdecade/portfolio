@@ -7,7 +7,6 @@ import IntroCardLink from "../IntroCardLink";
 import { Kbd } from "../Kbd";
 
 export default function IntroCard() {
-  // TODO: not super happy with this, fix typography and UI
   return (
     <motion.div
       className="row-span-2 px-1 pb-2 sm:col-span-2 lg:aspect-square"
