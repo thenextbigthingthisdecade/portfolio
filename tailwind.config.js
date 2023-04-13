@@ -20,6 +20,9 @@ module.exports = {
       textUnderlineOffset: {
         6: "6px",
       },
+      fontSize: {
+        '4.5xl': '2.5rem'
+      },
       keyframes: {
         enter: {
           from: {
