@@ -1,13 +1,19 @@
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { Card } from "@/components/Card";
 import IntroCard from "@/components/cards/IntroCard";
 import CardGridLayout from "@/components/layouts/CardGridLayout";
 import { supabase } from "@/lib/supabase/supabaseClient";
-import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
-export default function Home(
-  props: InferGetStaticPropsType<typeof getStaticProps>
-) {
+const DynamicCard = dynamic(() => import("@/components/Card"));
+
+function Home({ featured }) {
+  const [cards, setCards] = useState([]);
+  useEffect(() => {
+    setCards(featured?.map(({ card }) => card).filter(Boolean));
+  }, [featured]);
+
   return (
     <>
       <Head>
@@ -18,9 +24,9 @@ export default function Home(
       </Head>
       <CardGridLayout>
         <IntroCard />
-        {props.featured?.map(({ card }) =>
-          card && !Array.isArray(card) ? <Card key={card.id} {...card} /> : null
-        )}
+        {cards.map((card) => (
+          <DynamicCard key={card.id} {...card} />
+        ))}
       </CardGridLayout>
     </>
   );
@@ -42,3 +48,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Home;
