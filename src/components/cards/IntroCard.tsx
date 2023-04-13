@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import IntroCardLink from "../IntroCardLink";
+import { Kbd } from "../Kbd";
 
 export default function IntroCard() {
   return (
@@ -12,7 +13,7 @@ export default function IntroCard() {
       variants={FADE_DOWN_ANIMATION_VARIANTS}
     >
       <div className="h-full w-full p-4 sm:p-8">
-        <h1 className="font-serif font-serif-variation text-2xl md:text-3xl lg:text-4xl !tracking-tight font-light text-neutral-400">
+        <h1 className="font-serif font-serif-variation text-2xl md:text-3xl lg:text-3xl !tracking-tight font-light text-neutral-400">
           Heya, I&apos;m{" "}
           <span className="text-neutral-900">Prakhar Nagpal </span>
           👋🏻 Welcome to my{" "}
@@ -91,6 +92,28 @@ export default function IntroCard() {
           />{" "}
           as much as I can, although I have been focusing on CS for a while now,
           so that&apos;s something I&apos;m trying to fix.
+          <br />
+          <br />
+          Music is a pretty big part of my life, so I made sure to add some of
+          my favorite tracks here! Press{" "}
+          <span className="inline-flex gap-1 items-center justify-center">
+            {["ctrl+P"].map((elem, index) => (
+              <Kbd key={index}>{elem}</Kbd>
+            ))}
+          </span>{" "}
+          to pause,{" "}
+          <span className="inline-flex gap-1 items-center justify-center">
+            {["option+right", "option+left"].map((elem, index) => (
+              <Kbd key={index}>{elem}</Kbd>
+            ))}
+          </span>{" "}
+          to change tracks.
+          <span className="inline-flex gap-1 items-center justify-center">
+            {["option+up", "option+down"].map((elem, index) => (
+              <Kbd key={index}>{elem}</Kbd>
+            ))}
+          </span>{" "}
+          to reduce/increase volume.
         </h1>
       </div>
     </motion.div>

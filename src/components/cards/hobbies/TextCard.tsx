@@ -22,7 +22,7 @@ export function TextCard(props: TextCardProps) {
       <CardHeader type="Hobbies" label={props.label} />
 
       <div className="p-5">
-        <div className="flex gap-2">
+        <div className="flex gap-1">
           {props.tags.map((tag, index) => (
             <StatusTag key={index} status={tag.label} color={tag.color} />
           ))}

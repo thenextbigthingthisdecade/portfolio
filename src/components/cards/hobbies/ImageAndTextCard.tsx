@@ -42,7 +42,7 @@ export function ImageAndTextCard(props: ImageAndTextCardProps) {
           "group-hover:opacity-20"
         )}
       >
-        <div className="flex gap-2">
+        <div className="flex gap-1">
           {props.tags?.map((tag, index) => (
             <StatusTag key={index} status={tag.label} color={tag.color} />
           ))}

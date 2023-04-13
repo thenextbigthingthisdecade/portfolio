@@ -4,9 +4,9 @@ import { Play, useHowl } from "rehowl";
 export default function SoundController() {
   const maxTracksIndex = 5;
   const sources = [
+    "/tracks/track-3.mp3",
     "/tracks/track-1.mp3",
     "/tracks/track-2.mp3",
-    "/tracks/track-3.mp3",
     "/tracks/track-4.mp3",
     "/tracks/track-5.mp3",
   ];
@@ -16,6 +16,7 @@ export default function SoundController() {
   const [mute, setMute] = useState<boolean>(false);
   const { howl, state, error } = useHowl({
     src: sources[track],
+    defaultVolume: 1,
   });
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -35,7 +36,7 @@ export default function SoundController() {
           const prevTrack = track;
           updateTrack(prevTrack - 1);
         }
-      } else if (e.key === "p" && e.altKey) {
+      } else if (e.key === "p" && e.ctrlKey) {
         e.preventDefault();
         const prevPlaying = playing;
         setPlaying(!prevPlaying);
