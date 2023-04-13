@@ -7,16 +7,21 @@ import IntroCardLink from "../IntroCardLink";
 import { Kbd } from "../Kbd";
 
 export default function IntroCard() {
+  // TODO: not super happy with this, fix typography and UI
   return (
     <motion.div
       className="row-span-2 px-1 pb-2 sm:col-span-2 lg:aspect-square"
       variants={FADE_DOWN_ANIMATION_VARIANTS}
     >
       <div className="h-full w-full p-4 sm:p-8">
-        <h1 className="font-serif font-serif-variation text-2xl md:text-3xl lg:text-3xl !tracking-tight font-light text-neutral-400">
-          Heya, I&apos;m{" "}
-          <span className="text-neutral-900">Prakhar Nagpal </span>
-          👋🏻 Welcome to my{" "}
+        <h1 className="text-xl !tracking-tighter font-light text-neutral-400">
+          <span className="text-6xl text-neutral-900 md:text-8xl font-serif font-serif-variation">
+            hey.
+          </span>
+          <br />
+          <br />
+          I&apos;m <span className="text-neutral-900">Prakhar Nagpal. </span>
+          Welcome to my{" "}
           <Tooltip
             side="top"
             content="A Brief History & Ethos of the Digital Garden | Maggie Appleton"
@@ -29,7 +34,7 @@ export default function IntroCard() {
                 // State: focus
                 "focus-visible:ring-4 focus-visible:ring-blue-200",
                 // State: hover
-                "hover:text-neutral-900 underline underline-offset-2 decoration-neutral-200 hover:underline-offset-6 hover:decoration-neutral-700"
+                "hover:text-neutral-900 underline underline-offset-2 decoration-neutral-200 decoration-1 hover:decoration-neutral-700"
               )}
             >
               digital garden
@@ -48,7 +53,7 @@ export default function IntroCard() {
                 // State: focus
                 "focus-visible:ring-4 focus-visible:ring-blue-200",
                 // State: hover
-                "hover:text-neutral-900 underline underline-offset-2 decoration-neutral-200 hover:underline-offset-6 hover:decoration-neutral-700"
+                "hover:text-neutral-900 underline underline-offset-2 decoration-neutral-200 decoration-1 hover:decoration-neutral-700"
               )}
             >
               learning anything
@@ -59,36 +64,38 @@ export default function IntroCard() {
           <br />
           In my free time, I enjoy{" "}
           <IntroCardLink
-            side={"top"}
-            content={"Hobbies | Cooking"}
+            // side={"top"}
+            // content={"Hobbies | Cooking"}
             link_text={"cooking"}
+            link={"/hobbies"}
           />{" "}
           (a lot of Indian), playing{" "}
           <IntroCardLink
-            side={"top"}
-            content={"Hobbies | Badminton"}
+            // side={"top"}
+            // content={"Hobbies | Badminton"}
             link_text={"badminton"}
+            link={"/hobbies"}
           />{" "}
           and{" "}
           <IntroCardLink
-            side={"top"}
-            content={"Hobbies | Interior Design"}
+            // side={"top"}
+            // content={"Hobbies | Interior Design"}
             link_text={"re-decorating"}
+            link={"/hobbies"}
           />{" "}
-          my room.
-          <br />
-          <br />
-          I&apos;ve also been{" "}
+          my room. I&apos;ve also been{" "}
           <IntroCardLink
-            side={"top"}
-            content={"Prakhar's garden | Reading"}
+            // side={"top"}
+            // content={"Prakhar's garden | Reading"}
             link_text={"reading"}
+            link="/reading"
           />{" "}
           and{" "}
           <IntroCardLink
-            side={"top"}
-            content={"Prakhar's garden | Writing"}
+            // side={"top"}
+            // content={"Prakhar's garden | Writing"}
             link_text={"writing"}
+            link="/writing"
           />{" "}
           as much as I can, although I have been focusing on CS for a while now,
           so that&apos;s something I&apos;m trying to fix.
@@ -107,7 +114,7 @@ export default function IntroCard() {
               <Kbd key={index}>{elem}</Kbd>
             ))}
           </span>{" "}
-          to change tracks.
+          to change tracks. Press{" "}
           <span className="inline-flex gap-1 items-center justify-center">
             {["option+up", "option+down"].map((elem, index) => (
               <Kbd key={index}>{elem}</Kbd>
