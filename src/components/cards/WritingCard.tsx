@@ -29,7 +29,7 @@ export function WritingCard(props: WritingCardProps) {
                 return "text-4xl"
               }
         })(),
-        "font-display font-light"
+        "font-display font-light !tracking-tight"
         )}>
           {props.title}
         </h3>
