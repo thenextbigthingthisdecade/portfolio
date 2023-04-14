@@ -11,6 +11,7 @@ module.exports = {
         serif: ["var(--font-fraunces)", ...fontFamily.serif],
         mono: ["Jetbrains Mono", ...fontFamily.mono],
         display: ["Oritica", ...fontFamily.serif],
+        reading: ["Soehne Regular", ...fontFamily.sans],
       },
       boxShadow: {
         skeuo: "0 0 0 1px rgb(0, 0, 0, .05), 0 1px 0 0 rgb(0, 0, 0, .1)",
@@ -21,7 +22,7 @@ module.exports = {
         6: "6px",
       },
       fontSize: {
-        '4.5xl': '2.5rem'
+        "4.5xl": "2.5rem",
       },
       keyframes: {
         enter: {

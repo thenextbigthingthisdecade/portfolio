@@ -19,7 +19,8 @@ const fraunces = Fraunces({
 export default function AppLayout({ children }: PropsWithChildren) {
   useEffect(() => {
     toast("Music not playing?", {
-      description: "Just press a key on your keyboard, or click the screen. I'm aware of the issue, still working on a fix!",
+      description:
+        "Just close this thing (and it should work). I'm aware of the issue, still working on a fix!",
     });
   }, []);
   return (

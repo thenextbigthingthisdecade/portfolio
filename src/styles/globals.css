@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: "Soehne Regular";
+  src: url("/fonts/soehne-regular.otf");
+}
+
+@font-face {
   font-family: "Musetta";
   src: url("/fonts/musetta-regular-webfont.woff2") format("woff2");
 }
