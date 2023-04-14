@@ -4,7 +4,7 @@ import SoundController from "@/components/SoundController";
 import "@/styles/globals.css";
 import { MDXProvider } from "@mdx-js/react";
 import * as RadixTooltip from "@radix-ui/react-tooltip";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 
 const components = {
