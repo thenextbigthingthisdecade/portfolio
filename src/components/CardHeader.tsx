@@ -46,7 +46,6 @@ export function CardHeader(props: CardHeaderProps) {
         <Tooltip content={props.link.tooltipLabel} side="left">
           <a
             href={props.link.url}
-            target="_blank"
             rel="noreferrer"
             className={classNames(
               "flex h-8 w-8 items-center justify-center rounded-full transition-colors",

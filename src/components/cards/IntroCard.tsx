@@ -62,46 +62,19 @@ export default function IntroCard() {
           <br />
           <br />
           In my free time, I enjoy{" "}
-          <IntroCardLink
-            // side={"top"}
-            // content={"Hobbies | Cooking"}
-            link_text={"cooking"}
-            link={"/hobbies"}
-          />{" "}
-          (a lot of Indian), playing{" "}
-          <IntroCardLink
-            // side={"top"}
-            // content={"Hobbies | Badminton"}
-            link_text={"badminton"}
-            link={"/hobbies"}
-          />{" "}
-          and{" "}
-          <IntroCardLink
-            // side={"top"}
-            // content={"Hobbies | Interior Design"}
-            link_text={"re-decorating"}
-            link={"/hobbies"}
-          />{" "}
-          my room. I&apos;ve also been{" "}
-          <IntroCardLink
-            // side={"top"}
-            // content={"Prakhar's garden | Reading"}
-            link_text={"reading"}
-            link="/reading"
-          />{" "}
-          and{" "}
-          <IntroCardLink
-            // side={"top"}
-            // content={"Prakhar's garden | Writing"}
-            link_text={"writing"}
-            link="/writing"
-          />{" "}
-          as much as I can, although I have been focusing on CS for a while now,
-          so that&apos;s something I&apos;m trying to fix.
+          <IntroCardLink link_text={"cooking"} link={"/hobbies"} /> (a lot of
+          Indian), playing{" "}
+          <IntroCardLink link_text={"badminton"} link={"/hobbies"} /> and{" "}
+          <IntroCardLink link_text={"re-decorating"} link={"/hobbies"} /> my
+          room. I&apos;ve also been{" "}
+          <IntroCardLink link_text={"reading"} link="/reading" /> and{" "}
+          <IntroCardLink link_text={"writing"} link="/writing" /> as much as I
+          can, although I have been focusing on CS for a while now, so
+          that&apos;s something I&apos;m trying to fix.
           <br />
           <br />
           Music is a pretty big part of my life, so I made sure to add some of
-          my favorite tracks here! Press any{" "} <Kbd>key</Kbd> to start the music, {" "}
+          my favorite tracks here! Press{" "}
           <span className="inline-flex gap-1 items-center justify-center">
             {["ctrl+P"].map((elem, index) => (
               <Kbd key={index}>{elem}</Kbd>
