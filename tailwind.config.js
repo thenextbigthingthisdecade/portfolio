@@ -13,6 +13,7 @@ module.exports = {
         display: ["Oritica", ...fontFamily.serif],
         reading: ["Soehne Regular", ...fontFamily.sans],
         cursive: ["Musetta", ...fontFamily.sans],
+        italic: ["Soehne Regular Italic", ...fontFamily.sans],
       },
       colors: {
         article: {

@@ -1,5 +1,15 @@
 import AppLayout from "@/components/layouts/AppLayout";
-import { CodeEditor, H1, H2, H3, H4, H5, H6 } from "@/components/MDXComponents";
+import {
+  CodeEditor,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  ItalicText,
+  Paragraph,
+} from "@/components/MDXComponents";
 import SoundController from "@/components/SoundController";
 import "@/styles/globals.css";
 import { MDXProvider } from "@mdx-js/react";
@@ -14,6 +24,8 @@ const components = {
   h4: H4,
   h5: H5,
   h6: H6,
+  p: Paragraph,
+  i: ItalicText,
   pre: CodeEditor,
 };
 

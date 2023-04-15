@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: "Soehne Regular Italic";
+  src: url("/fonts/soehne-regular-italic.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Musetta";
   src: url("/fonts/musetta-regular-webfont.woff2") format("woff2");
 }
