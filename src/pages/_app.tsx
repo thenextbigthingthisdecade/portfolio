@@ -8,6 +8,7 @@ import {
   H5,
   H6,
   ItalicText,
+  MarkdownLink,
   Paragraph,
 } from "@/components/MDXComponents";
 import SoundController from "@/components/SoundController";
@@ -26,12 +27,15 @@ const components = {
   h6: H6,
   p: Paragraph,
   i: ItalicText,
+  a: MarkdownLink,
   pre: CodeEditor,
 };
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <RadixTooltip.Provider delayDuration={0}>
+      {/* TODO: fix the type of the a element */}
+      {/* @ts-ignore */}
       <MDXProvider components={components}>
         <AppLayout>
           <SoundController />
