@@ -29,7 +29,7 @@ export function WritingCard(props: WritingCardProps) {
                 return "text-4xl";
               }
             })(),
-            "font-display font-light !tracking-tight"
+            "font-serif font-serif-variation font-light !tracking-tight"
           )}
         >
           {props.title}
@@ -37,7 +37,7 @@ export function WritingCard(props: WritingCardProps) {
         <span className="mt-2 mb-4 block text-sm -tracking-[0.03em] text-neutral-400">
           {props.publishedOn}
         </span>
-        <p className="leading-relaxed text-neutral-700 line-clamp-3 md:line-clamp-4">
+        <p className="font-reading line-clamp-3 md:line-clamp-4 text-article-note">
           {props.contentPreview}
         </p>
       </div>

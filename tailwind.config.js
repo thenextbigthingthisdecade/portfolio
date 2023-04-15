@@ -12,6 +12,13 @@ module.exports = {
         mono: ["Jetbrains Mono", ...fontFamily.mono],
         display: ["Oritica", ...fontFamily.serif],
         reading: ["Soehne Regular", ...fontFamily.sans],
+        cursive: ["Musetta", ...fontFamily.sans],
+      },
+      colors: {
+        article: {
+          primary: "#3a3a3a",
+          note: "#8f8f8f",
+        },
       },
       boxShadow: {
         skeuo: "0 0 0 1px rgb(0, 0, 0, .05), 0 1px 0 0 rgb(0, 0, 0, .1)",
