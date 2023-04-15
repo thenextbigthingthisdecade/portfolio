@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Oritica";
-  src: url("/fonts/oritica-light.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "Soehne Regular";
   src: url("/fonts/soehne-regular.otf");
 }
