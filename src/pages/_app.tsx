@@ -7,6 +7,7 @@ import {
   H4,
   H5,
   H6,
+  HorizontalRule,
   ItalicText,
   MarkdownLink,
   Paragraph,
@@ -29,6 +30,7 @@ const components = {
   i: ItalicText,
   a: MarkdownLink,
   pre: CodeEditor,
+  hr: HorizontalRule,
 };
 
 export default function App({ Component, pageProps }: AppProps) {
