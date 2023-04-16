@@ -36,7 +36,7 @@ const components = {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <RadixTooltip.Provider delayDuration={0}>
-      {/* TODO: fix the type of the a element */}
+      {/* TODO: fix the type of the link element */}
       {/* @ts-ignore */}
       <MDXProvider components={components}>
         <AppLayout>
