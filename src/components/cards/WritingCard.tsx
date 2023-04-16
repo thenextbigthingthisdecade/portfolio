@@ -1,5 +1,4 @@
 import { WritingProperties } from "@/lib/types/cardTypes";
-import classNames from "classnames";
 
 import { CardHeader } from "../CardHeader";
 
@@ -20,18 +19,7 @@ export function WritingCard(props: WritingCardProps) {
       />
 
       <div className="p-5">
-        <h3
-          className={classNames(
-            (() => {
-              if (props.large) {
-                return "text-4.5xl/10";
-              } else {
-                return "text-4xl";
-              }
-            })(),
-            "font-serif font-serif-variation font-light !tracking-tight"
-          )}
-        >
+        <h3 className="font-serif font-serif-variation md:font-extralight font-light !tracking-tight md:text-5xl text-3xl">
           {props.title}
         </h3>
         <span className="mt-2 mb-4 block text-sm -tracking-[0.03em] text-neutral-400">

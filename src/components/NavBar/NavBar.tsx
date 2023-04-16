@@ -23,7 +23,9 @@ export function Navbar() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        <NavLink href="https://github.com/pn320">GitHub</NavLink>
+        <NavLink href="https://github.com/thenextbigthingthisdecade">
+          GitHub
+        </NavLink>
         <NavLink href="https://read.cv/pn320">CV</NavLink>
       </motion.div>
     </nav>
