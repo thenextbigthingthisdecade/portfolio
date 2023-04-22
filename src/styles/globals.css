@@ -41,4 +41,7 @@
     font-variation-settings: "opsz" 72, "SOFT" 50;
     @apply -tracking-[0.03em];
   }
+  .word-spacing-reduced {
+    word-spacing: -7px;
+  }
 }

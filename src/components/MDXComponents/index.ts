@@ -1,3 +1,4 @@
+export * from "./Aside";
 export * from "./CodeEditor";
 export * from "./Headings";
 export * from "./HorizontalRule";
