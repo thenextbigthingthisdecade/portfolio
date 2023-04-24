@@ -1,5 +1,5 @@
 import ArticleLayout from "@/components/layouts/ArticleLayout";
-import { Aside } from "@/components/MDXComponents";
+import { Highlight, Aside } from "@/components/MDXComponents";
 
 export default (props) => (
   <ArticleLayout title={"architecture."} date={"16 April, 2023"} {...props} />
@@ -7,14 +7,16 @@ export default (props) => (
 
 This is a post in a series about computer systems, starting from architecture. In the next couple of parts I will be covering Operating Systems (including writing one from scratch, bootloader and all), writing a compiler, and networking (If none of that made sense to you, don't worry I will explain each bit properly). I'd like this to be the course that I never had, an in depth coverage of computer systems that develops a solid mental model of all of the individual pieces (in quite a bit of detail) while keeping the big picture intact.
 
-So, let's get started.
+Let's get started!
 
-We have to begin by understanding exactly what all comes under a modern computer system. How does a simple program like the infamous, `hello, world!` get loaded into memory, how the computer translates and understands the source code from `.c` files (among other file types, I only choose `C` since it maps almost directly to the hardware of the computer making the conceptualisation easier), and how it then executes the code that we choose to run while also running hundreds (sometimes) of other processes at the same time (entering Operating System territory) (think of a process as _a single running program_ on the system. For example, the terminal running is one process, your web browser is another, the `hello, world!` code you run another, etc.).
+---
+
+We have to begin by understanding everything that comes under a modern computer system. How does a simple program like the infamous, `hello, world!` get loaded into memory, how the computer translates and understands the source code from `.c` files (among other file types, I only choose `C` since it maps almost directly to the hardware of the computer making the conceptualisation easier), and how it then executes the code that we choose to run while also running hundreds (sometimes) of other processes at the same time (entering Operating System territory) (<Highlight>think of a process as _a single running program_ on the system</Highlight>. For example, the terminal running is one process, your web browser is another, the `hello, world!` code you run another, etc.).
 
 <Aside variant="note" tags={[{ label: "reading", color: "sky" }]}>
-  If you're interested in learning about how the chrome browser works from a
-  system architecture point of view I'd recommend checking out [this fantastic
-  post](https://developer.chrome.com/blog/inside-browser-part1/) on the [Google
+  If you're interested in learning about how the chrome browser works I'd
+  recommend checking out [this fantastic series of
+  posts](https://developer.chrome.com/blog/inside-browser-part1/) on the [Google
   team's blog](https://developer.chrome.com/blog/).
 </Aside>
 
