@@ -1,6 +1,6 @@
 import AppLayout from "@/components/layouts/AppLayout";
 import {
-  CodeEditor,
+  Code,
   CodeInline,
   HorizontalRule,
   ItalicText,
@@ -18,7 +18,7 @@ const components = {
   p: Paragraph,
   i: ItalicText,
   a: MarkdownLink,
-  pre: CodeEditor,
+  pre: Code,
   code: CodeInline,
   hr: HorizontalRule,
 };

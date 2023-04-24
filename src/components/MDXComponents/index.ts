@@ -1,5 +1,6 @@
 export * from "./Aside";
-export * from "./CodeEditor";
+export * from "./CodeBlock";
+export * from "./CodeInline";
 export * from "./Headings";
 export * from "./HorizontalRule";
 export * from "./ItalicText";

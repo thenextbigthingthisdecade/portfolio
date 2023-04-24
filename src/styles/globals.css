@@ -42,6 +42,9 @@
     @apply -tracking-[0.03em];
   }
   .word-spacing-reduced {
-    word-spacing: -7px;
+    word-spacing: -2px;
+  }
+  .word-spacing-small {
+    word-spacing: -6px;
   }
 }

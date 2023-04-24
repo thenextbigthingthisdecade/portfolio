@@ -5,16 +5,28 @@ export default (props) => (
   <ArticleLayout title={"architecture."} date={"16 April, 2023"} {...props} />
 );
 
-This is a post in a series about computer systems, starting from architecture. In the next couple of parts I will be covering Operating Systems (including writing one from scratch, bootloader and all), writing a compiler, and networking (If none of that made sense to you, don't worry I will explain later on). I'd like this to be the course that I never had, an in depth coverage of computer systems that develops a solid mental model of all of the individual pieces (in quite a bit of detail) while keeping the big picture intact.
+This is a post in a series about computer systems, starting from architecture. In the next couple of parts I will be covering Operating Systems (including writing one from scratch, bootloader and all), writing a compiler, and networking (If none of that made sense to you, don't worry I will explain each bit properly). I'd like this to be the course that I never had, an in depth coverage of computer systems that develops a solid mental model of all of the individual pieces (in quite a bit of detail) while keeping the big picture intact.
 
 So, let's get started.
 
-We have to begin by understanding exactly what all comes under a modern computer system. How does a simple program like the infamous, `hello, world!` get loaded into memory, how the computer translates and understands the source code from `.c` files (among other file types, I only choose `C` since it maps almost directly to the hardware of the computer making the conceptualisation easier), and how it then executes the code that we choose to run while also running hundreds of other processes (think of a process as _a single running program_ running on the system, so for example the terminal running is one process, the browser is another, the `hello, world!` code you run is another, etc.) at the same time (entering Operating System territory).
+We have to begin by understanding exactly what all comes under a modern computer system. How does a simple program like the infamous, `hello, world!` get loaded into memory, how the computer translates and understands the source code from `.c` files (among other file types, I only choose `C` since it maps almost directly to the hardware of the computer making the conceptualisation easier), and how it then executes the code that we choose to run while also running hundreds (sometimes) of other processes at the same time (entering Operating System territory) (think of a process as _a single running program_ on the system. For example, the terminal running is one process, your web browser is another, the `hello, world!` code you run another, etc.).
 
 <Aside variant="note" tags={[{ label: "reading", color: "sky" }]}>
   If you're interested in learning about how the chrome browser works from a
   system architecture point of view I'd recommend checking out [this fantastic
-  post](https://developer.chrome.com/blog/inside-browser-part1/).
+  post](https://developer.chrome.com/blog/inside-browser-part1/) on the [Google
+  team's blog](https://developer.chrome.com/blog/).
 </Aside>
 
-In order to understand a computer system's working we're first going to see what happens when we take a simple bit of code like this,
+So let's see what happens inside a computer system to make this familiar little program run,
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("hello, world!\n");
+    return 0;
+}
+```
+
+The first thing

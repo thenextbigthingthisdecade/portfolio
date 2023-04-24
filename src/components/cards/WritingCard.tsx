@@ -19,7 +19,7 @@ export function WritingCard(props: WritingCardProps) {
       />
 
       <div className="p-5">
-        <h3 className="font-serif font-serif-variation md:font-extralight font-light !tracking-tight md:text-5xl text-3xl">
+        <h3 className="font-serif font-serif-variation font-light !tracking-tight md:text-5xl text-3xl">
           {props.title}
         </h3>
         <span className="mt-2 mb-4 block text-sm -tracking-[0.03em] text-neutral-400">

@@ -29,6 +29,10 @@ export function StatusTag(props: StatusTagProps) {
               return "bg-purple-400/40 text-purple-900";
             case "rose":
               return "bg-rose-400/40 text-rose-900";
+            case "teal":
+              return "bg-teal-400/40 text-teal-900";
+            case "blue":
+              return "bg-blue-400/40 text-blue-900";
           }
         })(),
         "inline-block rounded px-1.5 pt-0.5 pb-1",
