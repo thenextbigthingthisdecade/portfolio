@@ -44,7 +44,4 @@
   .word-spacing-reduced {
     word-spacing: -2px;
   }
-  .word-spacing-small {
-    word-spacing: -6px;
-  }
 }

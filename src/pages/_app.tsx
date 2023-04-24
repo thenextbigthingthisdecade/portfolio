@@ -2,6 +2,7 @@ import AppLayout from "@/components/layouts/AppLayout";
 import {
   Code,
   CodeInline,
+  H2,
   HorizontalRule,
   ItalicText,
   MarkdownLink,
@@ -21,13 +22,12 @@ const components = {
   pre: Code,
   code: CodeInline,
   hr: HorizontalRule,
+  h2: H2,
 };
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <RadixTooltip.Provider delayDuration={0}>
-      {/* TODO: fix the type of the link element */}
-      {/* @ts-ignore */}
       <MDXProvider components={components}>
         <AppLayout>
           <SoundController />

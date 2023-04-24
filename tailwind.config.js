@@ -18,6 +18,9 @@ module.exports = {
         article: {
           primary: "#3a3a3a",
           note: "#8f8f8f",
+          green: "#e9ffe8",
+          blue: "#e5f1ff",
+          grey: "#eaeaea",
         },
       },
       backgroundImage: {

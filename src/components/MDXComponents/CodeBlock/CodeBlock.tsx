@@ -13,7 +13,10 @@ export function CodeBlock({
   return (
     <Highlight
       {...defaultProps}
-      theme={{ styles: [], plain: {} }}
+      theme={{
+        styles: [],
+        plain: {},
+      }}
       code={codeString}
       language={language}
     >
@@ -21,19 +24,33 @@ export function CodeBlock({
         <pre
           className={classNames(
             //   spacing around
-            "mb-7 md:mb-11 px-6 py-4",
+            "mb-7 md:mb-11 px-2 py-4",
             //   code base styles
-            "text-sm word-spacing-reduced tracking-tight rounded-lg"
+            "text-sm word-spacing-reduced tracking-tight rounded-lg text-left",
+            // styling color
+            "",
+            [`${className}`]
           )}
+          style={style}
         >
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              <span className="mr-4 text-article-primary/60">{i + 1}</span>
+          {/* {tokens.map((line, index) => (
+            <div
+              key={index}
+              {...getLineProps({ line })}
+              className="group group-hover:bg-article-blue/80 transition-all duration-200 ease-in pt-[1px]"
+            >
+              <span className="pr-4 text-article-primary/50 group-hover:bg-article-blue/80 transition-all duration-200 ease-in">
+                {index + 1}
+              </span>
               {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
+                <span
+                  key={key}
+                  {...getTokenProps({ token })}
+                  className="group-hover:bg-article-blue/80 transition-all duration-200 ease-in w-full"
+                />
               ))}
             </div>
-          ))}
+          ))} */}
         </pre>
       )}
     </Highlight>
