@@ -1,5 +1,6 @@
+import theme from "@/lib/prismCodeBlockTheme";
 import classNames from "classnames";
-import Highlight, { Language, defaultProps } from "prism-react-renderer";
+import { Highlight } from "prism-react-renderer";
 
 export function CodeBlock({
   codeString,
@@ -7,16 +8,13 @@ export function CodeBlock({
   highlightLine,
 }: {
   codeString: string;
-  language: Language;
+  language: string;
   highlightLine: string | null;
 }) {
   return (
     <Highlight
-      {...defaultProps}
-      theme={{
-        styles: [],
-        plain: {},
-      }}
+      //   {...defaultProps}
+      theme={theme}
       code={codeString}
       language={language}
     >
@@ -26,31 +24,28 @@ export function CodeBlock({
             //   spacing around
             "mb-7 md:mb-11 px-2 py-4",
             //   code base styles
-            "text-sm word-spacing-reduced tracking-tight rounded-lg text-left",
+            "text-sm word-spacing-reduced tracking-tight rounded-lg text-left overflow-auto",
             // styling color
-            "",
             [`${className}`]
           )}
           style={style}
         >
-          {/* {tokens.map((line, index) => (
+          {tokens.map((line, index) => (
             <div
               key={index}
               {...getLineProps({ line })}
-              className="group group-hover:bg-article-blue/80 transition-all duration-200 ease-in pt-[1px]"
+              className="group pt-[1px]"
             >
-              <span className="pr-4 text-article-primary/50 group-hover:bg-article-blue/80 transition-all duration-200 ease-in">
-                {index + 1}
-              </span>
+              <span className="pr-4 text-article-grey-6">{index + 1}</span>
               {line.map((token, key) => (
                 <span
                   key={key}
                   {...getTokenProps({ token })}
-                  className="group-hover:bg-article-blue/80 transition-all duration-200 ease-in w-full"
+                  className="w-full"
                 />
               ))}
             </div>
-          ))} */}
+          ))}
         </pre>
       )}
     </Highlight>

@@ -18,9 +18,8 @@ const fraunces = Fraunces({
 
 export default function AppLayout({ children }: PropsWithChildren) {
   useEffect(() => {
-    toast("Music not playing?", {
-      description:
-        "Just close this thing (and it should work). I'm aware of the issue, still working on a fix!",
+    toast("Want some music?", {
+      description: "Simply press Ctrl+P to toggle play/pause.",
     });
   }, []);
   return (

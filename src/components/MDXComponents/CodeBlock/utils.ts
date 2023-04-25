@@ -1,4 +1,3 @@
-import { Language } from "prism-react-renderer";
 import { JSXElementConstructor, ReactElement, ReactNode } from "react";
 
 export function preToCodeBlock(props: { children?: ReactNode }) {
@@ -15,8 +14,8 @@ export function preToCodeBlock(props: { children?: ReactNode }) {
       codeString: codeString.trim(),
       language:
         matches && matches.groups && matches.groups.lang
-          ? (matches.groups.lang as Language)
-          : ("" as Language),
+          ? matches.groups.lang
+          : "",
       ...props,
     };
   }

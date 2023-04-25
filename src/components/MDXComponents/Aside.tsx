@@ -13,7 +13,7 @@ export function Aside({ tags, children }: VariantTypes & PropsWithChildren) {
         //   special rules and animations
         "[&_*]:pb-0 [&_p]:text-article-primary/70 transition-all duration-150 ease-linear flex-col blur-sm",
         //   base styling
-        "px-8 py-2 rounded-md mb-5 md:mb-7",
+        "py-2 rounded-md mb-5 md:mb-7 mx-auto w-3/4",
         // hover
         "hover:blur-none"
       )}

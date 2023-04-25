@@ -19,9 +19,9 @@ const components = {
   p: Paragraph,
   i: ItalicText,
   a: MarkdownLink,
-  pre: Code,
   code: CodeInline,
   hr: HorizontalRule,
+  pre: Code,
   h2: H2,
 };
 

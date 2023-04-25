@@ -20,7 +20,10 @@ module.exports = {
           note: "#8f8f8f",
           green: "#e9ffe8",
           blue: "#e5f1ff",
-          grey: "#eaeaea",
+          grey: {
+            1: "#eaeaea",
+            6: "#a8a8a8",
+          },
         },
       },
       backgroundImage: {

@@ -12,7 +12,7 @@ export default function SoundController() {
   ];
   const [volume, setVolume] = useState<number>(0.5);
   const [track, updateTrack] = useState<number>(1);
-  const [playing, setPlaying] = useState<boolean>(true);
+  const [playing, setPlaying] = useState<boolean>(false);
   const [mute, setMute] = useState<boolean>(false);
   const { howl, state, error } = useHowl({
     src: sources[track],
