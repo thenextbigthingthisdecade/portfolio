@@ -20,20 +20,13 @@ We have to begin by understanding everything that comes under a modern computer 
 
 So let's see what happens inside a computer system to make this familiar little program run,
 
-```css
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: optional;
-  src: url("https://assets.vercel.com/raw/upload/v1660068731/fonts/4/Inter.var.latin.woff2")
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
+```cpp
+#include <stdio.h>
 
-/* Plus eight more @font-face definitions for other languages and characters. */
+int main() {
+    printf("hello, world!\n");
+    return 0;
+}
 ```
 
 The first thing that happens is that the system retrieves the file contents from disk (the hard disk drive),

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { CodeBlock } from "./CodeBlock";
+import CodeBlock from "./CodeBlock";
 import { preToCodeBlock } from "./utils";
 
 export function Code(props: { children?: ReactNode }) {

@@ -29,6 +29,9 @@ module.exports = {
       backgroundImage: {
         noise: "url('/images/noise.png')",
       },
+      borderWidth: {
+        3: "3px",
+      },
       boxShadow: {
         skeuo: "0 0 0 1px rgb(0, 0, 0, .05), 0 1px 0 0 rgb(0, 0, 0, .1)",
         "inset-skeuo":
