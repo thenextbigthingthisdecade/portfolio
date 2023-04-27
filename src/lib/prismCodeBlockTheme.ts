@@ -47,67 +47,19 @@ const theme: PrismTheme = {
     {
       types: ["comment"],
       style: {
-        color: "#666",
+        color: "#7d7d7d",
       },
     },
     {
-      types: ["builtin"],
+      types: ["string", "number", "builtin", "variable"],
       style: {
-        color: "#c01b5d",
+        color: "#7d7d7d",
       },
     },
     {
-      types: ["number", "variable", "inserted"],
+      types: ["class-name", "function", "tag", "attr-name"],
       style: {
-        color: "rgb(9, 134, 88)",
-      },
-    },
-    {
-      types: ["operator"],
-      style: {
-        color: "rgb(0, 0, 0)",
-      },
-    },
-    {
-      types: ["constant", "char"],
-      style: {
-        color: "rgb(129, 31, 63)",
-      },
-    },
-    {
-      types: ["tag"],
-      style: {
-        color: "rgb(128, 0, 0)",
-      },
-    },
-    {
-      types: ["attr-name"],
-      style: {
-        color: "rgb(255, 0, 0)",
-      },
-    },
-    {
-      types: ["deleted", "string"],
-      style: {
-        color: "#067a6e",
-      },
-    },
-    {
-      types: ["changed", "punctuation"],
-      style: {
-        color: "rgb(4, 81, 165)",
-      },
-    },
-    {
-      types: ["function", "keyword"],
-      style: {
-        color: "#c01b5d",
-      },
-    },
-    {
-      types: ["class-name"],
-      style: {
-        color: "rgb(38, 127, 153)",
+        color: "#171717",
       },
     },
   ],

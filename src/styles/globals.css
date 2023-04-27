@@ -17,6 +17,11 @@
   src: url("/fonts/musetta-regular-webfont.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "SFMono Regular";
+  src: url("/fonts/sf-mono-regular.otf");
+}
+
 @layer base {
   * {
     @apply box-border focus:outline-none;

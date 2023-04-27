@@ -1,5 +1,6 @@
+import theme from "@/lib/prismCodeBlockTheme";
 import classNames from "classnames";
-import { Highlight, themes } from "prism-react-renderer";
+import { Highlight } from "prism-react-renderer";
 
 export default function CodeBlock({
   codeString,
@@ -11,15 +12,15 @@ export default function CodeBlock({
   highlightLine: string | null;
 }) {
   return (
-    <div>
-      <Highlight theme={themes.ultramin} code={codeString} language={language}>
+    <div className="">
+      <Highlight theme={theme} code={codeString} language={language}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
             className={classNames(
               //   spacing around
               "mb-7 md:mb-11 px-2 py-4",
               //   code base styles
-              "text-sm word-spacing-reduced tracking-tight rounded-lg text-left overflow-auto",
+              "text-sm/[22px] word-spacing-reduced tracking-tight text-left overflow-auto",
               // styling color
               "",
               // classname (language-{name})
@@ -28,8 +29,7 @@ export default function CodeBlock({
             style={style}
           >
             {tokens.map((line, index) => (
-              <div key={index} {...getLineProps({ line })} className="pt-[1px]">
-                <span className="pr-4 text-article-grey-6">{index + 1}</span>
+              <div key={index} {...getLineProps({ line })} className="">
                 {line.map((token, key) => (
                   <span key={key} {...getTokenProps({ token })} className="" />
                 ))}
