@@ -18,8 +18,8 @@
 }
 
 @font-face {
-  font-family: "SFMono Regular";
-  src: url("/fonts/sf-mono-regular.otf");
+  font-family: "SFMono";
+  src: url("/fonts/sf-mono.otf");
 }
 
 @layer base {

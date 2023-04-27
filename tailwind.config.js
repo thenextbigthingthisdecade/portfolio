@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)", ...fontFamily.sans],
         serif: ["var(--font-fraunces)", ...fontFamily.serif],
-        mono: ["Jetbrains Mono", ...fontFamily.mono],
+        mono: ["SFMono", ...fontFamily.mono],
         reading: ["Soehne Regular", ...fontFamily.sans],
         cursive: ["Musetta", ...fontFamily.sans],
         italic: ["Soehne Regular Italic", ...fontFamily.sans],
