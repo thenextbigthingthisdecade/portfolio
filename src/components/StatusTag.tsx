@@ -36,7 +36,7 @@ export function StatusTag(props: StatusTagProps) {
           }
         })(),
         "inline-block rounded px-1.5 pt-0.5 pb-1",
-        "font-mono text-sm tracking-tight",
+        "font-tag text-sm tracking-tight",
         "shadow-inset-skeuo"
       )}
     >

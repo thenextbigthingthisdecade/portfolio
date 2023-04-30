@@ -12,15 +12,13 @@ export default function CodeBlock({
   highlightLine: string | null;
 }) {
   return (
-    <div className="">
+    <div className="mb-7 md:mb-11 px-6 py-4">
       <Highlight theme={theme} code={codeString} language={language}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
             className={classNames(
-              //   spacing around
-              "mb-7 md:mb-11 px-2 py-4",
               //   code base styles
-              "text-sm/[22px] word-spacing-reduced tracking-tight text-left overflow-auto",
+              "text-sm word-spacing-reduced tracking-tight text-left overflow-auto",
               // styling color
               "",
               // classname (language-{name})

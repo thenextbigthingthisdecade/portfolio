@@ -5,8 +5,11 @@ import {
   H2,
   HorizontalRule,
   ItalicText,
+  ListElement,
   MarkdownLink,
+  OrderedList,
   Paragraph,
+  UnorderedList,
 } from "@/components/MDXComponents";
 import SoundController from "@/components/SoundController";
 import "@/styles/globals.css";
@@ -23,6 +26,9 @@ const components = {
   hr: HorizontalRule,
   pre: Code,
   h2: H2,
+  ul: UnorderedList,
+  li: ListElement,
+  ol: OrderedList,
 };
 
 export default function App({ Component, pageProps }: AppProps) {
