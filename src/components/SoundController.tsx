@@ -16,7 +16,7 @@ export default function SoundController() {
   const [mute, setMute] = useState<boolean>(false);
   const { howl, state, error } = useHowl({
     src: sources[track],
-    defaultVolume: 1.0
+    defaultVolume: 1.0,
   });
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -36,7 +36,7 @@ export default function SoundController() {
           const prevTrack = track;
           updateTrack(prevTrack - 1);
         }
-      } else if (e.key === "p" && e.ctrlKey) {
+      } else if (e.key === "π" && e.altKey) {
         e.preventDefault();
         const prevPlaying = playing;
         setPlaying(!prevPlaying);

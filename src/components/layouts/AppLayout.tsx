@@ -19,7 +19,8 @@ const fraunces = Fraunces({
 export default function AppLayout({ children }: PropsWithChildren) {
   useEffect(() => {
     toast("Want some music?", {
-      description: "Simply press Ctrl+P to toggle play/pause.",
+      description:
+        "I've turned off autoplay because of obvious reasons, simply press ⌥+P to toggle play/pause, ⌥+→/← to switch tracks and ⌥+↑/↓ to adjust the volume.",
     });
   }, []);
   return (
