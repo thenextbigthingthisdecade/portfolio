@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)", ...fontFamily.sans],
         serif: ["var(--font-fraunces)", ...fontFamily.serif],
-        mono: ["SFMono", ...fontFamily.mono],
+        mono: ["Jetbrains Mono", ...fontFamily.mono],
         tag: ["Jetbrains Mono", ...fontFamily.mono],
         reading: ["Soehne Regular", ...fontFamily.sans],
         cursive: ["Musetta", ...fontFamily.sans],
@@ -23,7 +23,12 @@ module.exports = {
           blue: "#e5f1ff",
           grey: {
             1: "#eaeaea",
+            4: "ededed",
+            5: "#e8e8e8",
             6: "#a8a8a8",
+            8: "#c7c7c7",
+            10: "#858585",
+            11: "6f6f6f",
           },
         },
       },

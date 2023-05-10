@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/NavBar";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Nunito } from "next/font/google";
 import { PropsWithChildren, useEffect } from "react";
 import { Toaster, toast } from "sonner";
 
@@ -13,6 +13,12 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   axes: ["opsz", "SOFT"],
   variable: "--font-fraunces",
+  display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
   display: "swap",
 });
 

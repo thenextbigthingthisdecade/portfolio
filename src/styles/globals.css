@@ -12,10 +12,10 @@
   src: url("/fonts/soehne-regular-italic.woff2") format("woff2");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Musetta";
   src: url("/fonts/musetta-regular-webfont.woff2") format("woff2");
-}
+} */
 
 @font-face {
   font-family: "SFMono";
@@ -38,6 +38,29 @@
 
   a {
     @apply text-inherit no-underline;
+  }
+
+  [data-rehype-pretty-code-fragment] {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    white-space: pre-wrap;
+    border: 1px solid #c7c7c7;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    letter-spacing: -0.025em;
+    line-height: 1.2rem;
+    overflow-x: "auto";
+    background-color: rgb(229 229 229 / 0.125);
+    position: relative;
+  }
+
+  code:not([data-rehype-pretty-code-fragment] code, pre code) {
+    background: rgb(229 229 229 / 0.45);
+    padding: 3px;
+    border-radius: 0.25rem;
+    letter-spacing: -0.025em;
+    font-size: 0.875rem;
   }
 }
 

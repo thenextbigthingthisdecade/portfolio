@@ -1,7 +1,6 @@
 import AppLayout from "@/components/layouts/AppLayout";
 import {
-  Code,
-  CodeInline,
+  BlockQuote,
   H2,
   HorizontalRule,
   ItalicText,
@@ -22,13 +21,12 @@ const components = {
   p: Paragraph,
   i: ItalicText,
   a: MarkdownLink,
-  code: CodeInline,
   hr: HorizontalRule,
-  pre: Code,
   h2: H2,
   ul: UnorderedList,
   li: ListElement,
   ol: OrderedList,
+  blockquote: BlockQuote,
 };
 
 export default function App({ Component, pageProps }: AppProps) {

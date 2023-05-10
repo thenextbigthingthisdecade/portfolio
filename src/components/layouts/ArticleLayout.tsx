@@ -1,18 +1,5 @@
-import { Fraunces, Inter } from "next/font/google";
+import classNames from "classnames";
 import { PropsWithChildren } from "react";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
 
 export default function ArticleLayout({
   title,
@@ -20,9 +7,13 @@ export default function ArticleLayout({
   date,
 }: PropsWithChildren & { title: string; date: string }) {
   return (
-    <div className="font-reading mt-12 md:mt-20 px-4 sm:px-6 lg:px-8 mx-auto max-w-3xl text-neutral-900 leading-[1.7]">
+    <div
+      className={classNames(
+        "font-reading mt-12 md:mt-20 px-4 sm:px-6 lg:px-8 mx-auto max-w-3xl text-neutral-900 leading-[1.75]"
+      )}
+    >
       <div className="mb-10">
-        <h1 className="font-serif font-serif-variation font-light text-6xl md:text-7xl">
+        <h1 className="-ml-1 font-serif font-serif-variation font-light text-6xl md:text-7xl">
           {title}
         </h1>
         <h3 className="text-article-note text-sm">{date}</h3>
